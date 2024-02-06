@@ -1,5 +1,5 @@
 import tkinter as tk
-import form_data
+import secret_text
 import winsound
 from tinydb import TinyDB, Query
 
@@ -20,7 +20,7 @@ def secret():
     secret_window.resizable(False, False)
     secret_window.title('Secret')
     secret_window_text = tk.Label(secret_window)
-    secret_window_text['text'] = form_data.terms_text_data
+    secret_window_text['text'] = secret_text.secret_text
     secret_window_text.pack()
     secret_window_close_button = tk.Button(secret_window, text='Close', command=secret_window.destroy)
     secret_window_close_button.pack()
